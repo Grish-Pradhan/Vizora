@@ -10,6 +10,8 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5229181109431309"
+     crossorigin="anonymous"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html,body{min-height:100%;background:#07070e;-webkit-font-smoothing:antialiased;font-family:'DM Sans',system-ui,sans-serif}
@@ -649,6 +651,44 @@ body.theme-slate .brand-gem{ background:linear-gradient(135deg,rgba(100,116,139,
 .board-title,.board-summary,.m-val,.m-lbl,.panel-title,.board-eyebrow,.hl-txt,.cl-txt{
   transition:color .35s ease, -webkit-text-fill-color .35s ease;
 }
+
+/* ══ AD SLOTS — styled to match the UI, non-intrusive ══ */
+
+/* Landing page — slim sponsor banner between features and pips */
+.l-ad-strip{
+  margin-top:2.2rem;
+  display:flex;align-items:center;justify-content:center;
+  gap:12px;flex-direction:column;
+}
+.l-ad-label{
+  font-size:9px;text-transform:uppercase;letter-spacing:.22em;
+  color:rgba(255,255,255,.18);font-family:'DM Sans',sans-serif;
+}
+.l-ad-frame{
+  width:100%;max-width:728px;min-height:90px;
+  border-radius:18px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.07);
+  background:rgba(255,255,255,.03);
+  backdrop-filter:blur(12px);
+  display:flex;align-items:center;justify-content:center;
+}
+
+/* Studio sidebar — card at the very bottom of sidebar scroll */
+.sidebar-ad-wrap{
+  margin-top:.4rem;padding:10px;
+  border-radius:16px;border:1px solid var(--bdr1);
+  background:rgba(0,0,0,.15);
+  overflow:hidden;
+}
+.sidebar-ad-label{
+  font-size:9px;text-transform:uppercase;letter-spacing:.2em;
+  color:var(--tx3);margin-bottom:6px;opacity:.7;
+  font-family:'DM Sans',sans-serif;text-align:center;
+}
+.sidebar-ad-frame{
+  width:100%;min-height:100px;border-radius:10px;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
 </style>
 </head>
 <body class="theme-midnight">
@@ -701,6 +741,21 @@ body.theme-slate .brand-gem{ background:linear-gradient(135deg,rgba(100,116,139,
       <div class="l-feat-card"><span class="l-feat-icon">💾</span><div class="l-feat-title">PNG · PDF · Word</div><div class="l-feat-desc">High-res exports with embedded screenshot for Word docs</div></div>
     </div>
     <div class="l-pips fu fu5" id="landingPips"></div>
+
+    <!-- Ad strip — landing page, below feature pips -->
+    <div class="l-ad-strip fu fu5">
+      <div class="l-ad-label">Advertisement</div>
+      <div class="l-ad-frame">
+        <ins class="adsbygoogle"
+             style="display:block;width:100%;height:90px;"
+             data-ad-client="ca-pub-5229181109431309"
+             data-ad-slot="auto"
+             data-ad-format="horizontal"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+    </div>
+
   </div>
   <div class="l-scroll"><span>scroll</span><span>↓</span></div>
 </div>
@@ -838,6 +893,20 @@ body.theme-slate .brand-gem{ background:linear-gradient(135deg,rgba(100,116,139,
       </div>
 
       <div class="tip"><strong>AI Tips:</strong> Click <em>✨ AI Auto-Summarize</em> to have Claude structure your notes automatically. Add <em>"Jan 2026 – Launch"</em> for timelines · <em>"Services 45%"</em> for pie charts · <em>"Leads: 120"</em> for KPIs · bullets for checklists.</div>
+
+      <!-- Ad slot — bottom of sidebar, naturally tucked -->
+      <div class="sidebar-ad-wrap">
+        <div class="sidebar-ad-label">Sponsor</div>
+        <div class="sidebar-ad-frame">
+          <ins class="adsbygoogle"
+               style="display:block;width:100%;height:100px;"
+               data-ad-client="ca-pub-5229181109431309"
+               data-ad-slot="auto"
+               data-ad-format="rectangle"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+      </div>
 
     </div>
     </div>
